@@ -40,4 +40,9 @@ Building::Building() {
    /* nothing */
 }
 
+Building::Building(const std::vector<Floor> & floorSetup, const std::vector<Elevator> & elevatorSetup)
+   : floors(floorSetup), elevators(elevatorSetup) {
+	   /* nothing */
+}
+
 }

@@ -67,10 +67,7 @@ public:
    /* public instance members */
 
    /* constructors */
-   Person(
-         Location startLoc, 
-         Location dest, 
-         enum PRIORITY p=UNKNOWN);
+   Person(Location startLoc, Location dest, enum PRIORITY p = UNKNOWN);
 
    /* public methods */
    Location getCurrent();

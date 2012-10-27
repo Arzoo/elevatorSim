@@ -31,29 +31,21 @@
 
 namespace elevatorSim { 
 /* constructors */
-Floor::Floor() {
-   signalingUp = false;
-   signalingDown = false;
-   hasUpperFloor = false;
-   hasLowerFloor = false;
+Floor::Floor(bool hasUpper, bool hasLower, bool downSignal, bool upSignal) :
+   signalingUp(upSignal),
+   signalingDown(downSignal),
+   hasUpperFloor(hasUpper),
+   hasLowerFloor(hasLower) {
+   /* nothing */
 }
 
-Floor::Floor(bool hasUpper, bool hasLower) {
-   signalingUp = false;
-   signalingDown = false;
-   hasUpperFloor = hasUpper;
-   hasLowerFloor = hasLower;
-}
-
-Floor::Floor(const Floor & copy) {
-   signalingUp = copy.signalingUp;
-   signalingDown = copy.signalingDown;
-   hasUpperFloor = copy.hasUpperFloor;
-   hasLowerFloor = copy.hasLowerFloor;
-
-   occupants.assign(
-         copy.occupants.begin(), 
-         copy.occupants.end());
+Floor::Floor(const Floor & copy) :
+   signalingUp(copy.signalingUp),
+   signalingDown(copy.signalingDown),
+   hasUpperFloor(copy.hasUpperFloor),
+   hasLowerFloor(copy.hasLowerFloor),
+   occupants(copy.occupants) {
+   /* nothing */
 }
 
 } /* namespace elevatorSim */

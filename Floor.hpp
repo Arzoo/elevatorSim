@@ -66,8 +66,7 @@ public:
    /* public instance members */
 
    /* constructors */
-   Floor();
-   Floor(bool hasUpper, bool hasLower);
+   Floor(bool hasUpper = false, bool hasLower = false, bool downSignal = false, bool upSignal = false);
    Floor(const Floor & copy);
 
    /* public methods */

@@ -33,16 +33,15 @@
 namespace elevatorSim {
 
 /* constructors */
-Location::Location() {
-   yVal = 0;
+
+Location::Location(int startYVal) :
+   yVal(startYVal) {
+   /* nothing */
 }
 
-Location::Location(int startYVal) {
-   yVal = startYVal;
-}
-
-Location::Location(const Location & copy) {
-   yVal = copy.yVal;
+Location::Location(const Location & copy) :
+	yVal(copy.yVal) {
+	/* nothing */
 }
 
 /* getters and setters */

@@ -69,8 +69,7 @@ public:
    /* public instance members */
 
    /* constructors */
-   Elevator();
-   Elevator(int mVel, int mAccel, int mOccupants);
+   Elevator(int mVel, int mAccel, int mOccupants, int startVel = 0, int startAccel = 0);
    Elevator(const Elevator & copy);
 
    /* public methods */

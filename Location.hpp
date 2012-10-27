@@ -41,9 +41,18 @@ class Location {
    /* private static methods */
 
    /* private instance members */
-   int yVal;
 
    /* private methods */
+
+protected:
+   /* protected static constants */
+
+   /* protected static methods */
+
+   /* protected instance members */
+   int yVal;
+
+   /* protected methods */
 
 public:
 
@@ -52,8 +61,7 @@ public:
    /* public instance members */
 
    /* constructors */
-   Location();
-   Location(int startYVal);
+   Location(int startYVal = 0);
    Location(const Location & copy);
 
    /* public methods */

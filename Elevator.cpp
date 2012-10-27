@@ -33,21 +33,24 @@
 
 namespace elevatorSim {
 /* constructors */
-Elevator::Elevator()
-: maxVel(0), maxAccel(0), maxOccupants(0), currentAccel(0), currentVel(0) {
+
+Elevator::Elevator(const int mVel, int mAccel, int mOccupants, int startVel, int startAccel) :
+   maxVel(mVel),
+   maxAccel(mAccel),
+   maxOccupants(mOccupants),
+   currentAccel(startVel),
+   currentVel(startAccel) {
    /* nothing */
 }
 
-Elevator::Elevator(const int mVel, int mAccel, int mOccupants)
-: maxVel(mVel), maxAccel(mAccel), maxOccupants(mOccupants), currentAccel(0), currentVel(0) {
+Elevator::Elevator(const Elevator & copy) :
+   maxVel(copy.maxVel),
+   maxAccel(copy.maxAccel),
+   maxOccupants(copy.maxOccupants),
+   occupants(copy.occupants),
+   currentVel(copy.currentVel),
+   currentAccel(copy.currentAccel) {
    /* nothing */
-}
-
-Elevator::Elevator(const Elevator & copy)
-: maxVel(copy.maxVel), maxAccel(copy.maxAccel), maxOccupants(copy.maxOccupants) {
-   currentVel = copy.currentVel;
-   currentAccel = copy.currentAccel;
-   occupants.assign(copy.occupants.begin(), copy.occupants.end());
 }
 
 }
